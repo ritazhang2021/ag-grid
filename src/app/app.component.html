@@ -1,0 +1,19 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div>
+  <p class="instructions">
+    <strong>Instructions</strong>: right click a row and select any menu option
+  </p>
+  <ag-grid-angular
+    style="width: 400px; height: 500px;"
+    class="ag-theme-alpine"
+    [rowData]="rowData$ | async"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [getContextMenuItems]="getContextMenuItems"
+    [immutableData]="true"
+    [getRowNodeId]="getRowNodeId"
+    (gridReady)="onGridReady($event)"
+  >
+  </ag-grid-angular>
+</div>
